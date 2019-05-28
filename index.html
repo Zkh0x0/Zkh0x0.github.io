@@ -8,7 +8,7 @@
     var numberInputbox = document.getElementById("number");
     var infoDiv = document.getElementById("infoDiv");
     function btnClick(){
-      var dh = numberInputbox.innertText; 
+      var dh = numberInputbox.value; 
       var htmlContent= infoDiv.innertHtml;
       htmlContent= htmlContent.replace("{{dh}}",dh);
       htmlContent= htmlContent.replace("{{time}}","====");
