@@ -1,12 +1,28 @@
 <head>
-<body>
 
+<body>
+  <script>
+    var numberInputbox = document.getElementById("number");
+    var infoDiv = document.getElementById("infoDiv");
+    function btnClick(){
+      var dh = numberInputbox.innertText; 
+      var htmlContent= infoDiv.innertHtml;
+      htmlContent= htmlContent.replace("{{dh}}",dh);
+      htmlContent= htmlContent.replace("{{time}}","====");
+      htmlContent= htmlContent.replace("{{Date}}","====");
+      
+    }
+  </script>
+<input id="number"  />
+  <button onclick="btnClick();" ></
   
-跟踪单号73114022852516(中通)包裹情况<br/>
+ <div id="infoDiv">
+跟踪单号{{dh}}(中通)包裹情况<br/>
 公司名称 中通快递<br/>
 
-快递单号 73114022852516<br/>
+快递单号 {{dh}}<br/>
 
  => 物流信息与官网实时同步，已耗时0天1时37分<br/>
-2019年5月28日 上午9:20:29<br/>
-[安溪] 【泉州市】 【安溪】（0595-26031348、0595-26089227） 的 赤岭vip（15396661393） 已揽收<br/>
+{{date}} 上午{{time}}<br/>
+[安溪] 【泉州市】 【安溪】 的 赤岭vip 已揽收<br/>
+  </div>
