@@ -6,7 +6,7 @@
 <body>
 
 <input id="number"  />
-  <button onclick="btnClick();" >生成</button>
+  <button id="Btn1" >生成</button>
   
  <div id="infoDiv">
 跟踪单号{{dh}}(中通)包裹情况<br/>
@@ -22,7 +22,9 @@
 	  document.onload =function(){
 		    var numberInputbox = document.getElementById("number");
 		    var infoDiv = document.getElementById("infoDiv");
-		    function btnClick(){
+		  var BtnDom = document.getElementById("Btn1");
+		  
+		  BtnDom.onClick = function btnClick(){
 		      var dh = numberInputbox.value; 
 		      var htmlContent= infoDiv.innertHtml;
 		      htmlContent= htmlContent.replace("{{dh}}",dh);
