@@ -19,18 +19,18 @@
 [安溪] 【泉州市】 【安溪】 的 赤岭vip 已揽收<br/>
   </div>
   <script>
-	  document.onload =function(){
+	  
 		    var numberInputbox = document.getElementById("number");
 		    var infoDiv = document.getElementById("infoDiv");
 		  var BtnDom = document.getElementById("Btn1");
 		  
-		  BtnDom.onClick = function(){
+		  BtnDom.onclick = function(){
 		      var dh = numberInputbox.value; 
-		      var htmlContent= infoDiv.innertHtml;
+		      var htmlContent= infoDiv.innerHTML;
 		      htmlContent= htmlContent.replace("{{dh}}",dh);
 		      htmlContent= htmlContent.replace("{{time}}","====");
 		      htmlContent= htmlContent.replace("{{Date}}","====");
-		      infoDiv.innertHtml = htmlContent;
-		    }
+		      infoDiv.innerHTML =  htmlContent;
+	    
 	  }
   </script>
