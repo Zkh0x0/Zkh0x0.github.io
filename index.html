@@ -4,18 +4,7 @@
 	<meta content="always" name="referrer">
     <meta name="theme-color" content="#2932e1">
 <body>
-  <script>
-    var numberInputbox = document.getElementById("number");
-    var infoDiv = document.getElementById("infoDiv");
-    function btnClick(){
-      var dh = numberInputbox.value; 
-      var htmlContent= infoDiv.innertHtml;
-      htmlContent= htmlContent.replace("{{dh}}",dh);
-      htmlContent= htmlContent.replace("{{time}}","====");
-      htmlContent= htmlContent.replace("{{Date}}","====");
-      
-    }
-  </script>
+
 <input id="number"  />
   <button onclick="btnClick();" >生成</button>
   
@@ -29,3 +18,17 @@
 {{date}} 上午{{time}}<br/>
 [安溪] 【泉州市】 【安溪】 的 赤岭vip 已揽收<br/>
   </div>
+  <script>
+	  document.onload =function(){
+		    var numberInputbox = document.getElementById("number");
+		    var infoDiv = document.getElementById("infoDiv");
+		    function btnClick(){
+		      var dh = numberInputbox.value; 
+		      var htmlContent= infoDiv.innertHtml;
+		      htmlContent= htmlContent.replace("{{dh}}",dh);
+		      htmlContent= htmlContent.replace("{{time}}","====");
+		      htmlContent= htmlContent.replace("{{Date}}","====");
+
+		    }
+	  }
+  </script>
