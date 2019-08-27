@@ -1,3 +1,16 @@
 <script>
-  document.location.href="http://qr.topscan.com/api.php?text=https://qr.alipay.com/fkx03173alwv626oj2a59f2?t=1566831784317"
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+Psx = getQueryVariable("value").replace("@","=");
+Psx = "https://qr.alipay.com/"+Psx;
+document.location.href="http://qr.topscan.com/api.php?text="+Psx;
 </script>
