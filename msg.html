@@ -22,7 +22,7 @@ function getPar(par){
     function b64Decode(str) {
         return decodeURIComponent(atob(str));
     }
-
+var base64txt= getPar("base64");
 var result2 = b64Decode(base64txt);  
 document.write(decodeURIComponent(result2));  
 /*var ex=result2.trim();
