@@ -16,9 +16,14 @@ function getPar(par){
     }
     return get_par;
 }
-var base64txt=(getPar("base64"));
-var base = new Base64();  
-var result2 = base.decode(base64txt);  
+     function b64Encode(str) {
+        return btoa(encodeURIComponent(str));
+    }
+    function b64Decode(str) {
+        return decodeURIComponent(atob(str));
+    }
+
+var result2 = b64Decode(base64txt);  
 document.write(decodeURIComponent(result2));  
 /*var ex=result2.trim();
 var x=eval(ex)
