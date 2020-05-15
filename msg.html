@@ -19,7 +19,7 @@ function getPar(par){
 var base64txt=(getPar("base64"));
 var base = new Base64();  
 var result2 = base.decode(base64txt);  
-document.write(result2);  
+document.write(decodeURIComponent(result2));  
 /*var ex=result2.trim();
 var x=eval(ex)
 document.getElementById("m").src=x[2];
