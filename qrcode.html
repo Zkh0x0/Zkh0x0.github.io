@@ -3,6 +3,8 @@
 <body>
 <center><img id="qr"  /></center>
 <script>
+
+    
 function getPar(par){
     var local_url = document.location.href; 
     var get = local_url.indexOf(par +"=");
@@ -122,4 +124,11 @@ function Base64() {
         return string;  
     }  
 }
+        if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
+        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                //在微信中打开
+        }else{
+               document.body.innerHTML="<h1>请在微信中打开</h1>"
+        }
 </script>
