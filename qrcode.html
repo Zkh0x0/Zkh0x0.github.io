@@ -19,7 +19,9 @@ function getPar(par){
 var base64txt=(getPar("m"));
 var base = new Base64();  
 var result2 = base.decode(base64txt);  
-document.write(decodeURIComponent(result2));  
+    //https://viapi.cn/qrcode/?m=1&e=L&p=8&text=
+document.getElementById("qr").src="https://viapi.cn/qrcode/?m=1&e=L&p=8&text="+decodeURIComponent(result2);
+//document.write(decodeURIComponent(result2));  
 
 
 
